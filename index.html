@@ -6,7 +6,7 @@
         content="Motion Marionette is a zero-shot framework for rigid motion transfer from monocular videos to single images.">
   <meta name="keywords" content="Motion transfer, Gaussian Splatting">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Motion Marionette</title>
+  <title>Motion Marionette: Rethinking Motion Transfer via Prior Guidance</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <!--   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
@@ -205,7 +205,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Abstract
+            We present Motion Marionette, a zero-shot framework for rigid motion transfer from monocular source videos to single-view target images. 
+            Prior approaches rely on geometric, generative, or simulation priors, each introducing trade-offs between generalizability and temporal consistency. 
+            To alleviate these trade-offs, we rethink motion transfer as a bidirectional process, where a shared underlying motion distribution establishes mutual 
+            correspondence between the source and transferred videos, allowing either to serve as the input video in the transfer process. 
+            Motivated by this perspective, we first lift both the source video and target image into a unified 3D representation space. 
+            Motion trajectories are then extracted from the source video to construct a spatial-temporal (SpaT) prior that is independent of object geometry and semantics, capturing relative spatial changes over time.
+            This prior is integrated with the target object to synthesize a controllable velocity field, which is subsequently refined using Position-Based Dynamics to reduce artifacts and enhance visual coherence.
+            Empirical results demonstrate that Motion Marionette generalizes across diverse objects, produces temporally consistent videos that align well with source motion, and supports controllable video generation. 
           </p>
         </div>
       </div>
